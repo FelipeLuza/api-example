@@ -57,7 +57,10 @@ public class ConfigSecurity {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                    .allowedOrigins("*")
+                    .allowedOrigins(
+                    	"http://localhost:5173",
+                        "https://atitus-maps-frontend.netlify.app"
+                    )
                     .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                     .allowedHeaders("*")
                     .allowCredentials(false);      
